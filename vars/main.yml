@@ -1,0 +1,6 @@
+---
+# vars file for atlantis
+atlantis_zip: atlantis_{{ atlantis_platform }}.zip
+atlantis_url: '{{ atlantis_mirror }}/{{ atlantis_ver }}/{{ atlantis_zip }}'
+atlantis_install_dir: '{{ atlantis_parent_install_dir }}/atlantis-{{ atlantis_ver }}'
+atlantis_link_dir: '{{ atlantis_parent_install_dir }}/bin'

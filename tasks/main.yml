@@ -1,0 +1,56 @@
+---
+- name: resolve platform specific vars
+  include_vars: '{{ item }}'
+  with_first_found:
+    - files:
+        - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
+        - '{{ ansible_distribution }}.yml'
+        - '{{ ansible_os_family }}.yml'
+      skip: true
+      paths:
+        - '{{ role_path }}/vars'
+
+- name: check for install
+  become: yes
+  stat:
+    path: '{{ atlantis_install_dir }}'
+  changed_when: false
+  register: atlantis_bin
+
+- when: not atlantis_bin.stat.exists
+  block:
+    - name: download....
+      become: yes
+      become_user: root
+      get_url:
+        url: '{{ atlantis_url }}'
+        dest: /tmp/{{ atlantis_zip }}
+        mode: 0644
+    - name: make install dir
+      become: yes
+      become_user: root
+      file:
+        path: '{{ atlantis_install_dir }}'
+        state: directory
+        mode: 0755
+    - name: unarchive...
+      become: yes
+      become_user: root
+      unarchive:
+        remote_src: yes
+        src: /tmp/{{ atlantis_zip }}
+        dest: '{{ atlantis_install_dir }}'
+  always:
+    - name: delete zip...
+      become: yes
+      become_user: root
+      file:
+        path: /tmp/{{ atlantis_zip }}
+        state: absent
+- name: link...
+  become: yes
+  become_user: root
+  file:
+    src: '{{ atlantis_install_dir }}/atlantis'
+    dest: '{{ atlantis_link_dir }}/atlantis'
+    state: link

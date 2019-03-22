@@ -1,0 +1,14 @@
+---
+# defaults file for atlantis
+atlantis_mirror: https://github.com/runatlantis/atlantis/releases/download
+atlantis_ver: v0.5.1
+atlantis_platform: linux_amd64
+
+atlantis_checksums:
+  v0.5.1:
+    darwin_amd64: sha256:c56f0b6d0a18914f86e4db055cb92c46b108794ad61994c8fd6267a4bc751a3f
+    linux_386: sha256:01894fd6b2172a0b62afcf76e7b8aaf7c31c37d664c868ce905eae6b4ac6d805
+    linux_amd64: sha256:d30ba4fcce2911c084182d3892d602bad2b88b650fd9f69e83970d73db8d098f
+    linux_arm: sha256:24a30ef6516d3e3508a6973ea84b9e75b48ae6afc0949278a1b271e6a6a10d57
+
+atlantis_parent_install_dir: /usr/local
