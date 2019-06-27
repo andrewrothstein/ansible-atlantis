@@ -4,7 +4,7 @@ dependencies:
 galaxy_info:
   author: Andrew Rothstein
   company: BlueMountain Capital
-  description: '@TODO name this role'
+  description: installs atlantis
   galaxy_tags:
   - development
   license:
@@ -30,3 +30,4 @@ galaxy_info:
     versions:
     - jessie
     - stretch
+  role_name: atlantis
