@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
-VER=v0.8.2
+VER=v0.8.3
 DIR=~/Downloads
 MIRROR=https://github.com/runatlantis/atlantis/releases/download
 
