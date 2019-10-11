@@ -5,16 +5,17 @@ MIRROR=https://github.com/runatlantis/atlantis/releases/download
 
 dl()
 {
-    OS=$1
-    PLATFORM=$2
-    URL=$MIRROR/$VER/atlantis_${OS}_$PLATFORM.zip
-    LFILE=$DIR/atlantis_${OS}_${PLATFORM}_$VER.zip
-    if [ ! -e $LFILE ]
+    local os=$1
+    local arch=$2
+    local platform="${os}_${arch}"
+    local url=$MIRROR/$VER/atlantis_${platform}.zip
+    local lfile=$DIR/atlantis_${platform}_$VER.zip
+    if [ ! -e $lfile ];
     then
-       wget -q -O $LFILE $URL
+       wget -q -O $lfile $url
     fi
-    printf "    # %s\n" $URL
-    printf "    %s-%s: sha256:%s\n" $OS $PLATFORM `sha256sum $LFILE | awk '{print $1}'`
+    printf "    # %s\n" $url
+    printf "    %s: sha256:%s\n" $platform `sha256sum $lfile | awk '{print $1}'`
 }
 
 printf "  %s:\n" $VER

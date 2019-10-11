@@ -25,6 +25,7 @@
       get_url:
         url: '{{ atlantis_url }}'
         dest: /tmp/{{ atlantis_zip }}
+        checksum: '{{ atlantis_checksum }}'
         mode: 0644
     - name: make install dir
       become: yes
