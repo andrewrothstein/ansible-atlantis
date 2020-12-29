@@ -23,7 +23,7 @@ env:
 - OS=ubuntu_focal
 - OS=ubuntu_xenial
 language: python
-python: '3.7'
+python: '3.9'
 script:
 - ansible-galaxy-local-deps-write
 - dcb --upstreamgroup andrewrothstein --upstreamapp docker-ansible-role --pullall
