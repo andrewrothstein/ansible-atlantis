@@ -5,7 +5,7 @@ before_install: "if [[ \"$TRAVIS_OS_NAME\" == \"osx\" ]]\nthen\n  brew upgrade o
 branches:
   except:
   - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
-dist: xenial
+dist: focal
 env:
 - OS=alpine_3.11
 - OS=alpine_3.12
