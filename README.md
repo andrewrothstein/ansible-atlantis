@@ -1,6 +1,7 @@
 andrewrothstein.atlantis
 =========
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-atlantis.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-atlantis)
+![Build Status](https://github.com/andrewrothstein/ansible-atlantis/actions/workflows/build.yml/badge.svg)
+
 
 Installs [https://www.runatlantis.io/](Atlantis)
 
