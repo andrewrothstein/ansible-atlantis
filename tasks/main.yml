@@ -10,7 +10,7 @@
       paths:
         - '{{ role_path }}/vars'
 
-- name: check for install
+- name: checking for install in {{ atlantis_install_dir }}
   become: yes
   stat:
     path: '{{ atlantis_install_dir }}'
@@ -19,39 +19,39 @@
 
 - when: not atlantis_bin.stat.exists
   block:
-    - name: download....
+    - name: downloading {{ atlantis_url }}...
       become: yes
       become_user: root
       get_url:
         url: '{{ atlantis_url }}'
-        dest: /tmp/{{ atlantis_zip }}
+        dest: '{{ atlantis_tmp_zip }}'
         checksum: '{{ atlantis_checksum }}'
         mode: 0644
-    - name: make install dir
+    - name: mkdir -p {{ atlantis_install_dir }}
       become: yes
       become_user: root
       file:
         path: '{{ atlantis_install_dir }}'
         state: directory
         mode: 0755
-    - name: unarchive...
+    - name: unarchiving {{ atlantis_tmp_zip }} to {{ atlantis_install_dir }}
       become: yes
       become_user: root
       unarchive:
         remote_src: yes
-        src: /tmp/{{ atlantis_zip }}
+        src: '{{ atlantis_tmp_zip }}'
         dest: '{{ atlantis_install_dir }}'
   always:
-    - name: delete zip...
+    - name: rm -f {{ atlantis_tmp_zip }}
       become: yes
       become_user: root
       file:
-        path: /tmp/{{ atlantis_zip }}
+        path: '{{ atlantis_tmp_zip }}'
         state: absent
-- name: link...
+- name: linking {{ atlantis_link }} to {{ atlantis_exe }}
   become: yes
   become_user: root
   file:
-    src: '{{ atlantis_install_dir }}/atlantis'
-    dest: '{{ atlantis_link_dir }}/atlantis'
+    src: '{{ atlantis_exe }}'
+    dest: '{{ atlantis_link }}'
     state: link

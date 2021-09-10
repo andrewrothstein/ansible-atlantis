@@ -2,7 +2,10 @@
 # vars file for atlantis
 atlantis_platform: '{{ atlantis_os }}_{{ atlantis_arch }}'
 atlantis_zip: atlantis_{{ atlantis_platform }}.zip
+atlantis_tmp_zip: /tmp/{{ atlantis_zip }}
 atlantis_url: '{{ atlantis_mirror }}/{{ atlantis_ver }}/{{ atlantis_zip }}'
 atlantis_checksum: '{{ atlantis_checksums[atlantis_ver][atlantis_platform] }}'
 atlantis_install_dir: '{{ atlantis_parent_install_dir }}/atlantis-{{ atlantis_ver }}'
+atlantis_exe: '{{ atlantis_install_dir }}/atlantis'
 atlantis_link_dir: '{{ atlantis_parent_install_dir }}/bin'
+atlantis_link: '{{ atlantis_link_dir }}/atlantis'
