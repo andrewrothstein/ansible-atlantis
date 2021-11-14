@@ -144,3 +144,12 @@ atlantis_checksums:
     linux_arm: sha256:c0d5450ab8c71fed2287c57e67219fc9adee736647eb87e84712e38e2ae4a30c
     # https://github.com/runatlantis/atlantis/releases/download/v0.17.3/atlantis_darwin_amd64.zip
     darwin_amd64: sha256:a22830a6fdfd7bb835be552e9d2909be873ab6f9deb49554606f2bd641c97dd9
+  v0.17.4:
+    # https://github.com/runatlantis/atlantis/releases/download/v0.17.4/atlantis_linux_amd64.zip
+    linux_amd64: sha256:f08dc5cc6d380c70d4ba5e89cdfe33784398ae97949887db22a1175cec74f277
+    # https://github.com/runatlantis/atlantis/releases/download/v0.17.4/atlantis_linux_386.zip
+    linux_386: sha256:04c20afc50a40d740d15113d197ccd9cb3fde0fb8351f13f0d55d0c9dbca15d7
+    # https://github.com/runatlantis/atlantis/releases/download/v0.17.4/atlantis_linux_arm.zip
+    linux_arm: sha256:4238cacd391789d4bd730eea2345b5005e85721cd1791b13e736dc6291fdcf75
+    # https://github.com/runatlantis/atlantis/releases/download/v0.17.4/atlantis_darwin_amd64.zip
+    darwin_amd64: sha256:2da660da7ddd176d63628e1295aad01712368b576c4ecf562d7dc8bd4aebf0a6
