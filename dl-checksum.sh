@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -e
 DIR=~/Downloads
 MIRROR=https://github.com/runatlantis/atlantis/releases/download
 
@@ -21,10 +22,14 @@ dl()
 dl_ver() {
     local ver=$1
     printf "  %s:\n" $ver
-    dl $ver linux amd64
-    dl $ver linux 386
-    dl $ver linux arm
     dl $ver darwin amd64
+    dl $ver darwin arm64
+    dl $ver linux 386
+    dl $ver linux amd64
+    dl $ver linux arm
+    dl $ver linux arm64
+    dl $ver windows 386
+    dl $ver windows amd64
 }
 
-dl_ver ${1:-v0.17.5}
+dl_ver ${1:-v0.18.1}
