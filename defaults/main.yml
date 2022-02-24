@@ -1,7 +1,7 @@
 ---
 # defaults file for atlantis
 atlantis_mirror: https://github.com/runatlantis/atlantis/releases/download
-atlantis_ver: v0.18.1
+atlantis_ver: v0.18.2
 
 atlantis_os: linux
 atlantis_arch: amd64
@@ -213,3 +213,20 @@ atlantis_checksums:
     windows_386: sha256:bf4906a47a8b80051fc5bf082484350472277daa24e82c846e260bda93ca1c27
     # https://github.com/runatlantis/atlantis/releases/download/v0.18.1/atlantis_windows_amd64.zip
     windows_amd64: sha256:e0e4ebb01809563254656c888baf28f308122b1c7c8fd0d53ccf80555c12a838
+  v0.18.2:
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.2/atlantis_darwin_amd64.zip
+    darwin_amd64: sha256:4ba12d0d9cde9e52bfe59500e86b8eec36f5d8f35c826cd7c47932ef97a7f8ad
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.2/atlantis_darwin_arm64.zip
+    darwin_arm64: sha256:6a2cdcaa8c27fba80626ddcce9bb2ace25b0fb19b4b1a5529cc609c89c9f37d0
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.2/atlantis_linux_386.zip
+    linux_386: sha256:9a55f45dea3bb302e7239d19e66fd6da620fde1186a1611909f09c77a437eb59
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.2/atlantis_linux_amd64.zip
+    linux_amd64: sha256:ad4b6bc26cdad34d6aee8256ee9982c36c598496d0374df033481a93f7c64de3
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.2/atlantis_linux_arm.zip
+    linux_arm: sha256:93463d1bb5a231a2fce49bd7ee9e0f8d709bde03c5954a89c8d25d059d7dd123
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.2/atlantis_linux_arm64.zip
+    linux_arm64: sha256:16bfb0aff2a5adf64e90030d0e8560f4edd46754eeadeaf06a5f217a555bc005
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.2/atlantis_windows_386.zip
+    windows_386: sha256:c7e64e81137c575e964863b85a737d2ea50a4e45fbae52980d63016e1ee35f5d
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.2/atlantis_windows_amd64.zip
+    windows_amd64: sha256:05467e35f6f66f3b4e5188e87aea056fa13f550c1e2fdb049b7c616b36c98f5b
