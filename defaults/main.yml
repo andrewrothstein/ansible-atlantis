@@ -1,7 +1,7 @@
 ---
 # defaults file for atlantis
 atlantis_mirror: https://github.com/runatlantis/atlantis/releases/download
-atlantis_ver: v0.18.2
+atlantis_ver: v0.18.3
 
 atlantis_os: linux
 atlantis_arch: amd64
@@ -230,3 +230,20 @@ atlantis_checksums:
     windows_386: sha256:c7e64e81137c575e964863b85a737d2ea50a4e45fbae52980d63016e1ee35f5d
     # https://github.com/runatlantis/atlantis/releases/download/v0.18.2/atlantis_windows_amd64.zip
     windows_amd64: sha256:05467e35f6f66f3b4e5188e87aea056fa13f550c1e2fdb049b7c616b36c98f5b
+  v0.18.3:
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.3/atlantis_darwin_amd64.zip
+    darwin_amd64: sha256:0ec26e0e46d840fc9a5f26bed585c2417b99763c7392fc3bd695f77aa7f4f4f6
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.3/atlantis_darwin_arm64.zip
+    darwin_arm64: sha256:038741a2c1b68b4342b2c77bd991460a9b407b42aeb0912c3820312268fd8976
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.3/atlantis_linux_386.zip
+    linux_386: sha256:c8b4a1b93510273304b6f70224cb9242ce19fb575a140e484c3738c079a7ec62
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.3/atlantis_linux_amd64.zip
+    linux_amd64: sha256:a9467be096b497482592e3e40d03f63bdeac29e1f0cc0b44ab09c37ec6b9a39b
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.3/atlantis_linux_arm.zip
+    linux_arm: sha256:b3bf44c1550cd7bfa031464bb3585066dd8a2e2b48915aecc1e8b0575cf91c3d
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.3/atlantis_linux_arm64.zip
+    linux_arm64: sha256:7f4cb6d1bcc68563d04b01f809c97ca7572d0cbb99aae558f7111eb4eacac745
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.3/atlantis_windows_386.zip
+    windows_386: sha256:af6133ab51d44fb4faf38243258ed03c150d10be0dbdf998e439a82afb9b5fb7
+    # https://github.com/runatlantis/atlantis/releases/download/v0.18.3/atlantis_windows_amd64.zip
+    windows_amd64: sha256:953db4dc81f9268cf539acc7e919777df20b95ed0b4c54b7b35bccfa0a6f05da
