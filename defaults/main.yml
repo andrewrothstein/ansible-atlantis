@@ -1,7 +1,7 @@
 ---
 # defaults file for atlantis
 atlantis_mirror: https://github.com/runatlantis/atlantis/releases/download
-atlantis_ver: v0.18.3
+atlantis_ver: v0.19.1
 
 atlantis_os: linux
 atlantis_arch: amd64
@@ -247,3 +247,20 @@ atlantis_checksums:
     windows_386: sha256:af6133ab51d44fb4faf38243258ed03c150d10be0dbdf998e439a82afb9b5fb7
     # https://github.com/runatlantis/atlantis/releases/download/v0.18.3/atlantis_windows_amd64.zip
     windows_amd64: sha256:953db4dc81f9268cf539acc7e919777df20b95ed0b4c54b7b35bccfa0a6f05da
+  v0.19.1:
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.1/atlantis_darwin_amd64.zip
+    darwin_amd64: sha256:dd0acba2bc6acd99e7a44d6cbd9c6da7b639165bc4b8ac0a3b03cb9356f921fc
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.1/atlantis_darwin_arm64.zip
+    darwin_arm64: sha256:3a0e63093e81c2d820ac4394615ea03ef27927f97dece36e1e3817c3f7925d03
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.1/atlantis_linux_386.zip
+    linux_386: sha256:a5aa7fcc69ed288affb7a191ebf9019b6e2cfee0464e8e6115768855363f50ce
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.1/atlantis_linux_amd64.zip
+    linux_amd64: sha256:fa97851708e56396cd45ef9be491c5e3c4652aff7f2576b5aadeabeef143d61f
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.1/atlantis_linux_arm.zip
+    linux_arm: sha256:a2bf4f502c8ec4b59d8c68502fbe65d806574dcef556e7fc71f9f9a7fb3e618f
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.1/atlantis_linux_arm64.zip
+    linux_arm64: sha256:8e13debde0bed39b65ef23f98babc8da747f4202ac2751ddb272fd1c334ade53
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.1/atlantis_windows_386.zip
+    windows_386: sha256:f1ee9658a9a8dd889e23add5a9b2f1636e99c89688298beb77ee3a219022bfb1
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.1/atlantis_windows_amd64.zip
+    windows_amd64: sha256:eadbf46e0d4934d20d64a1151b7f228d2476a6a85348b54c417a424ed593039e
