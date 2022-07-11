@@ -1,7 +1,7 @@
 ---
 # defaults file for atlantis
 atlantis_mirror: https://github.com/runatlantis/atlantis/releases/download
-atlantis_ver: v0.19.3
+atlantis_ver: v0.19.4
 
 atlantis_os: linux
 atlantis_arch: amd64
@@ -298,3 +298,20 @@ atlantis_checksums:
     windows_386: sha256:c6b276fbb0bc2d30a7e0bcb4c3fd26612f623e7087183cb1d7a6efd6712c15d0
     # https://github.com/runatlantis/atlantis/releases/download/v0.19.3/atlantis_windows_amd64.zip
     windows_amd64: sha256:2ccf1c28d7b17785328854b40fc25ca5ac0346d5c6d46ffe4469fcd23548073a
+  v0.19.4:
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.4/atlantis_darwin_amd64.zip
+    darwin_amd64: sha256:47cb8bfc0b2bca5af567f799c3228d6e9ec74cd5273bbafaed4f96443cc42afe
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.4/atlantis_darwin_arm64.zip
+    darwin_arm64: sha256:0e85f8e6d6f7c4f44efde403418e1fc6c0922956d1dd7675f9a1024c1c154c38
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.4/atlantis_linux_386.zip
+    linux_386: sha256:f078777c2bf5e38e48540a51342b30f9ca6cc78cd9a20d90f3734619b530718b
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.4/atlantis_linux_amd64.zip
+    linux_amd64: sha256:93f5faec2a095731516d77eb27e18758dcfd25915cba351f0e981abf1c9c6568
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.4/atlantis_linux_arm.zip
+    linux_arm: sha256:739be76f5ecdc071c615e293d259fb16fcb778b1cfa2d5b55a271677332d7471
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.4/atlantis_linux_arm64.zip
+    linux_arm64: sha256:fadfc0ba63e24dd87a0ba37cf2d881d3f3698ac03070b282b2a6598d56aa4afb
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.4/atlantis_windows_386.zip
+    windows_386: sha256:35d4ee3b75ec6757dad88fee6c066de8fc99aa837f70db43091eca4f8b8b5141
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.4/atlantis_windows_amd64.zip
+    windows_amd64: sha256:c716cde13e384b3ff1ebe383a4389aed02e4de3c39bd7503c853ffaa1ffa19c0
