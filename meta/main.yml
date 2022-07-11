@@ -1,3 +1,4 @@
+---
 dependencies:
 - andrewrothstein.unarchive-deps
 galaxy_info:
@@ -31,4 +32,5 @@ galaxy_info:
     versions:
     - bionic
     - focal
+    - jammy
   role_name: atlantis
