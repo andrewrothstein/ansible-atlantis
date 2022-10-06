@@ -3,8 +3,11 @@
 atlantis_mirror: https://github.com/runatlantis/atlantis/releases/download
 atlantis_ver: v0.19.7
 
-atlantis_os: linux
-atlantis_arch: amd64
+atlantis_arch_map:
+  386: 386
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
 
 atlantis_parent_install_dir: /usr/local
 

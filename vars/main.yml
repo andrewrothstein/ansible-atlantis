@@ -1,5 +1,7 @@
 ---
 # vars file for atlantis
+atlantis_os: '{{ ansible_system | lower }}'
+atlantis_arch: '{{ atlantis_arch_map[ansible_architecture] }}'
 atlantis_platform: '{{ atlantis_os }}_{{ atlantis_arch }}'
 atlantis_zip: atlantis_{{ atlantis_platform }}.zip
 atlantis_tmp_zip: /tmp/{{ atlantis_zip }}
