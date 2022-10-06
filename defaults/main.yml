@@ -1,7 +1,7 @@
 ---
 # defaults file for atlantis
 atlantis_mirror: https://github.com/runatlantis/atlantis/releases/download
-atlantis_ver: v0.19.7
+atlantis_ver: v0.19.8
 
 atlantis_arch_map:
   386: 386
@@ -352,3 +352,20 @@ atlantis_checksums:
     windows_386: sha256:0899760eca691f4632dee389712a1a92f92f4173008dc7bfc576e5af8a04aa2c
     # https://github.com/runatlantis/atlantis/releases/download/v0.19.7/atlantis_windows_amd64.zip
     windows_amd64: sha256:9a9c0ad188a34239c94716e371293bf27c1d56ef76289f0639109b4771f7edce
+  v0.19.8:
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.8/atlantis_darwin_amd64.zip
+    darwin_amd64: sha256:20085223e68c97dd7da090adb5118d1096e5d15f1428cd6370e3e08a80768e52
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.8/atlantis_darwin_arm64.zip
+    darwin_arm64: sha256:98d85fb0ee3bc2088865fd9b59abf55e952684754906f3a96baadcc0976b193f
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.8/atlantis_linux_386.zip
+    linux_386: sha256:d92d023b85f7a914138e87c8499eae5f676119bd3330d03a7b1d6666dc7fd0fb
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.8/atlantis_linux_amd64.zip
+    linux_amd64: sha256:c6e6454875c08ece91dae25a5e09c1f594614c36cc77808f767cef1968a380e8
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.8/atlantis_linux_arm.zip
+    linux_arm: sha256:e483829e3a0fb5bd25007749fdbf1c6c70e2918939ada1d0bcb53bfd8edb15df
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.8/atlantis_linux_arm64.zip
+    linux_arm64: sha256:78d8c96d6d1e4f1635074bc9cc1996916bc9c236ecc171e2d905c26e919b41ad
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.8/atlantis_windows_386.zip
+    windows_386: sha256:92721d8d85419f4b40d7fc56cbe3c60db236e05ef9c7d736e885e5671e03843b
+    # https://github.com/runatlantis/atlantis/releases/download/v0.19.8/atlantis_windows_amd64.zip
+    windows_amd64: sha256:953e10b3f3d045c2e5750e05b34cb6ffc809f89395f0720556b8cf0d00e55f5d
