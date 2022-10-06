@@ -1,4 +1,6 @@
 ---
+- include_role:
+    name: andrewrothstein.unarchive-deps
 - name: resolve platform specific vars
   include_vars: '{{ item }}'
   with_first_found:
@@ -11,7 +13,7 @@
         - '{{ role_path }}/vars'
 
 - name: checking for install in {{ atlantis_install_dir }}
-  become: yes
+  become: true
   stat:
     path: '{{ atlantis_install_dir }}'
   changed_when: false
@@ -20,7 +22,7 @@
 - when: not atlantis_bin.stat.exists
   block:
     - name: downloading {{ atlantis_url }}...
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ atlantis_url }}'
@@ -28,28 +30,28 @@
         checksum: '{{ atlantis_checksum }}'
         mode: 0644
     - name: mkdir -p {{ atlantis_install_dir }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ atlantis_install_dir }}'
         state: directory
         mode: 0755
     - name: unarchiving {{ atlantis_tmp_zip }} to {{ atlantis_install_dir }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ atlantis_tmp_zip }}'
         dest: '{{ atlantis_install_dir }}'
   always:
     - name: rm -f {{ atlantis_tmp_zip }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ atlantis_tmp_zip }}'
         state: absent
 - name: linking {{ atlantis_link }} to {{ atlantis_exe }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ atlantis_exe }}'
