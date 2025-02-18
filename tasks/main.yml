@@ -1,8 +1,9 @@
 ---
-- include_role:
-    name: andrewrothstein.unarchive-deps
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Installing andrewrothstein.unarchivedeps
+  ansible.builtin.include_role:
+    name: andrewrothstein.unarchivedeps
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -12,48 +13,50 @@
       paths:
         - '{{ role_path }}/vars'
 
-- name: checking for install in {{ atlantis_install_dir }}
+- name: Checking for install in {{ atlantis_exe }}
   become: true
-  stat:
-    path: '{{ atlantis_install_dir }}'
+  ansible.builtin.stat:
+    path: '{{ atlantis_exe }}'
   changed_when: false
   register: atlantis_bin
 
-- when: not atlantis_bin.stat.exists
+- name: Downloading and installing atlantis
+  when: not atlantis_bin.stat.exists
   block:
-    - name: downloading {{ atlantis_url }}...
+    - name: Downloading {{ atlantis_url }}...
       become: true
       become_user: root
-      get_url:
+      ansible.builtin.get_url:
         url: '{{ atlantis_url }}'
         dest: '{{ atlantis_tmp_zip }}'
         checksum: '{{ atlantis_checksum }}'
-        mode: 0644
-    - name: mkdir -p {{ atlantis_install_dir }}
+        mode: '644'
+    - name: Mkdir -p {{ atlantis_install_dir }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ atlantis_install_dir }}'
         state: directory
-        mode: 0755
-    - name: unarchiving {{ atlantis_tmp_zip }} to {{ atlantis_install_dir }}
+        mode: '755'
+    - name: Unarchiving {{ atlantis_tmp_zip }} to {{ atlantis_install_dir }}
       become: true
       become_user: root
-      unarchive:
+      ansible.builtin.unarchive:
         remote_src: true
         src: '{{ atlantis_tmp_zip }}'
         dest: '{{ atlantis_install_dir }}'
+        creates: '{{ atlantis_exe }}'
   always:
-    - name: rm -f {{ atlantis_tmp_zip }}
+    - name: Rm -f {{ atlantis_tmp_zip }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ atlantis_tmp_zip }}'
         state: absent
-- name: linking {{ atlantis_link }} to {{ atlantis_exe }}
+- name: Linking {{ atlantis_link }} to {{ atlantis_exe }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ atlantis_exe }}'
     dest: '{{ atlantis_link }}'
     state: link
